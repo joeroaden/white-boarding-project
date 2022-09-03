@@ -1,0 +1,22 @@
+//Question 4 Checking for Uniqueness
+//Prompt - write a function that determines if all elements in a string are unique - return a boolean
+//Constraints - cannot convert into an array or use array methods
+//Behaviors - loop through the string, and check the string at each index and compare those indices to themselves, check for duplicate, when we find a duplicate, return false, if not return true
+//Clarifying Q - expect a string input, no edge case of 10^10 string
+//input - "hello"
+//output - false
+//input - "copyright"
+//output: true
+
+function checker(string) {
+    for(i = 0; i <string.length; i++){
+        for(j = i+1; j<string.length; j++){
+            if(string[i] === string[j])
+                return false;
+        }
+    }
+    return true;
+}
+    console.log(checker("hello"));
+    console.log(checker("copyright"));
+    console.log(checker("qwertyuiopasdfghjklzxcvbnm"));
